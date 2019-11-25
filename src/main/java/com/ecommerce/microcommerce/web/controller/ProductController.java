@@ -112,5 +112,18 @@ public class ProductController {
             marges.add(produit.getNom() + "  Marge : "  + marge.toString());
         }
         return marges;
+    public MappingJacksonValue trierProduitsParOrdreAlphabetique() {
 
+        Iterable<Product> produits = productDao.trierProduitsAlphabetique();
+
+        SimpleBeanPropertyFilter monFiltre = SimpleBeanPropertyFilter.serializeAllExcept("prixAchat");
+
+        FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
+
+        MappingJacksonValue produitsFiltres = new MappingJacksonValue(produits);
+
+        produitsFiltres.setFilters(listDeNosFiltres);
+
+        return produitsFiltres;
+    }
 }
