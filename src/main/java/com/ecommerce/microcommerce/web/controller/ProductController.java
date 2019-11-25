@@ -112,6 +112,8 @@ public class ProductController {
             marges.add(produit.getNom() + "  Marge : "  + marge.toString());
         }
         return marges;
+    }
+    
     public MappingJacksonValue trierProduitsParOrdreAlphabetique() {
 
         Iterable<Product> produits = productDao.trierProduitsAlphabetique();
