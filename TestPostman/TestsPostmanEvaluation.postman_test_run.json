@@ -1,0 +1,156 @@
+{
+  "id": "8459979b-2831-473d-85bf-aef325a3793e",
+  "name": "TestsPostmanEvaluation",
+  "allTests": [],
+  "timestamp": "2019-11-26T19:23:08.453Z",
+  "collection_id": "75da64f1-767d-4968-8313-9d546a0867c6",
+  "folder_id": 0,
+  "target_type": "collection",
+  "environment_id": "0",
+  "data": [],
+  "delay": 0,
+  "count": 1,
+  "collection": {
+    "id": "75da64f1-767d-4968-8313-9d546a0867c6",
+    "name": "TestsPostmanEvaluation",
+    "order": [
+      "77b21ccb-b313-4647-a27d-b2c50deaed4d",
+      "ff962a9c-c864-4cee-9b1e-0a0432ca17f7",
+      "e9c0e3af-469d-4a22-b7b1-dd80861c33a6"
+    ],
+    "folders_order": [],
+    "isFavorite": false
+  },
+  "folder": null,
+  "environment": null,
+  "globals": [],
+  "results": [
+    {
+      "name": "calculerMargeProduit",
+      "id": "77b21ccb-b313-4647-a27d-b2c50deaed4d",
+      "url": "http://localhost:9090/AdminProduits",
+      "totalTime": 0,
+      "responseCode": {
+        "code": 200,
+        "name": "OK",
+        "detail": {
+          "name": "OK",
+          "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+        }
+      },
+      "tests": {},
+      "testPassFailCounts": {},
+      "times": [
+        "156"
+      ],
+      "allTests": [
+        {}
+      ],
+      "time": "156",
+      "totalRequestTime": "156",
+      "iterationResults": {}
+    },
+    {
+      "name": "trierProduitsParOrdreAlphabetique",
+      "id": "ff962a9c-c864-4cee-9b1e-0a0432ca17f7",
+      "url": "http://localhost:9090/Produits/trierProduitsParOrdreAlphabetique",
+      "totalTime": 0,
+      "responseCode": {
+        "code": 200,
+        "name": "OK",
+        "detail": {
+          "name": "OK",
+          "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+        }
+      },
+      "tests": {},
+      "testPassFailCounts": {},
+      "times": [
+        "9"
+      ],
+      "allTests": [
+        {}
+      ],
+      "time": "9",
+      "totalRequestTime": "9",
+      "iterationResults": {}
+    },
+    {
+      "name": "ajouterProduit",
+      "id": "e9c0e3af-469d-4a22-b7b1-dd80861c33a6",
+      "url": "http://localhost:9090/Produits",
+      "totalTime": 0,
+      "responseCode": {
+        "code": 201,
+        "name": "Created",
+        "detail": {
+          "name": "Created",
+          "detail": "The request has been fulfilled and resulted in a new resource being created."
+        }
+      },
+      "tests": {},
+      "testPassFailCounts": {},
+      "times": [
+        "16"
+      ],
+      "allTests": [
+        {}
+      ],
+      "time": "16",
+      "totalRequestTime": "16",
+      "iterationResults": {}
+    }
+  ],
+  "totalPass": 0,
+  "totalFail": 0,
+  "totalTime": 181,
+  "lifecycle": "done",
+  "requests": [
+    {
+      "name": "calculerMargeProduit",
+      "id": "77b21ccb-b313-4647-a27d-b2c50deaed4d",
+      "url": "http://localhost:9090/AdminProduits",
+      "time": "2019-11-26T19:23:08.453Z",
+      "responseCode": {
+        "code": 200,
+        "name": "OK",
+        "detail": {
+          "name": "OK",
+          "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+        }
+      },
+      "testPassFailCounts": {}
+    },
+    {
+      "name": "trierProduitsParOrdreAlphabetique",
+      "id": "ff962a9c-c864-4cee-9b1e-0a0432ca17f7",
+      "url": "http://localhost:9090/Produits/trierProduitsParOrdreAlphabetique",
+      "time": "2019-11-26T19:23:08.453Z",
+      "responseCode": {
+        "code": 200,
+        "name": "OK",
+        "detail": {
+          "name": "OK",
+          "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+        }
+      },
+      "testPassFailCounts": {}
+    },
+    {
+      "name": "ajouterProduit",
+      "id": "e9c0e3af-469d-4a22-b7b1-dd80861c33a6",
+      "url": "http://localhost:9090/Produits",
+      "time": "2019-11-26T19:23:08.453Z",
+      "responseCode": {
+        "code": 201,
+        "name": "Created",
+        "detail": {
+          "name": "Created",
+          "detail": "The request has been fulfilled and resulted in a new resource being created."
+        }
+      },
+      "testPassFailCounts": {}
+    }
+  ],
+  "synced": false
+}
