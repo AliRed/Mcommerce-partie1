@@ -2,7 +2,6 @@ package com.ecommerce.microcommerce.web.controller;
 
 import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Product;
-import com.ecommerce.microcommerce.web.exceptions.ProduitGratuitException;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
@@ -17,14 +16,11 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.List;
 
 
 @Api( description="API pour es opérations CRUD sur les produits.")
-/**
- * @Author Ali LAHMER
- */
+
 @RestController
 public class ProductController {
 
@@ -73,10 +69,6 @@ public class ProductController {
 
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
 
-        if (product.getPrix() == 0) {
-            throw new ProduitGratuitException("Le prix devente de l'article ne peur être 0 !");
-        }
-
         Product productAdded =  productDao.save(product);
 
         if (productAdded == null)
@@ -120,23 +112,5 @@ public class ProductController {
             marges.add(produit.getNom() + "  Marge : "  + marge.toString());
         }
         return marges;
-   }
-
-    @RequestMapping(value = "/Produits/trierProduitsParOrdreAlphabetique", method = RequestMethod.GET)
-
-    public MappingJacksonValue trierProduitsParOrdreAlphabetique() {
-
-        Iterable<Product> produits = productDao.trierProduitsAlphabetique();
-
-        SimpleBeanPropertyFilter monFiltre = SimpleBeanPropertyFilter.serializeAllExcept("prixAchat");
-
-        FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
-
-        MappingJacksonValue produitsFiltres = new MappingJacksonValue(produits);
-
-        produitsFiltres.setFilters(listDeNosFiltres);
-
-        return produitsFiltres;
-    }
 
 }
